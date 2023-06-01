@@ -16,13 +16,13 @@ public class PostRepository {
     this.allPosts = new ConcurrentHashMap<>();
   }
 
-    public Collection<Post> all() {
-      return allPosts.values();
-    }
+  public Collection<Post> all() {
+    return allPosts.values();
+  }
 
-    public Optional<Post> getById(long id) {
-      return Optional.ofNullable(allPosts.get(id));
-    }
+  public Optional<Post> getById(long id) {
+    return Optional.ofNullable(allPosts.get(id));
+  }
 
   public Post save(Post savePost) {
     if (savePost.getId() == 0) {
